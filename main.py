@@ -5,11 +5,18 @@ import networkx as nx
 import nltk
 
 nltk.download('stopwords')
- 
+
+a = """hello there
+this is a test"""
+
+print(a.splitlines())
+
 def read_article(file_name):
     file = open(file_name, "r")
     filedata = file.readlines()
-    article = filedata[0].split(". ")
+    text = """I went to the doctor. I bought a car. I'll have a beer."""
+    textdata = text.splitlines()
+    article = textdata[0].split(". ")
     sentences = []
 
     for sentence in article:
