@@ -10,12 +10,10 @@ def read_article(text):
   textdata = text.splitlines()
   article = textdata[0].split(". ")
   sentences = []
-
   for sentence in article:
     print(sentence)
     sentences.append(sentence.replace("[^a-zA-Z]", " ").split(" "))
   sentences.pop() 
-    
   return sentences
 
 def sentence_similarity(sent1, sent2, stopwords=None):
